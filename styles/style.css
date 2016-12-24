@@ -1,0 +1,76 @@
+#gallery {
+    max-width: 1024px;
+}
+
+.panel-body img {
+    width: 100%;
+}
+
+.form-group label {
+    color: darkgray;
+    padding-left: 20px;
+}
+
+.panel {
+    -webkit-transition: box-shadow 0.6s;
+    transition: box-shadow 0.6s;
+}
+
+.panel:hover {
+    box-shadow: 0px 0px 20px 2px rgba(138,138,138,1);
+    -webkit-transition: box-shadow 0.4s;
+    transition: box-shadow 0.4s;
+}
+
+/*Force make with of row 100% on small screens (smaller than 768px) because it`s shrink*/
+
+@media only screen and (max-width : 767px) {
+    
+.flex-row > [class*='col-sm'] {
+    width: 100%;
+    }
+}
+
+/*Add equal height of columns with unequal content size*/
+
+.flex-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.flex-row > [class*='col-'] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.panel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+
+.panel-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+}
